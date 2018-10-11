@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'app_drawer.dart';
+import 'app_carousel.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,6 +10,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Widget imageCarousel = AppCarousel();
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.pink,
@@ -22,6 +25,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       drawer: AppDrawer(),
+      body: AppCarousel(),
     );
   }
 }
